@@ -10,7 +10,7 @@ class topic (models.Model):
     
 class Website(models.Model):
     Topic_name=models.ForeignKey(topic,on_delete=models.CASCADE)
-    name=  models.CharField(max_length=100)
+    name=models.CharField(max_length=100)
     url=models.URLField()
     def __str__ (self):
         return self.name
